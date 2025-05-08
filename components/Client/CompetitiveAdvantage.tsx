@@ -1,5 +1,6 @@
 "use client";
 import { Fragment } from "react";
+import Image from "next/image";
 import SectionTitle from "@/components/Server/SectionTitle";
 import ResponsiveMaskText from "@/components/Client/ResponsiveMaskTextVariant";
 import ParallaxContainer from "@/components/Client/ParallaxContainer";
@@ -61,19 +62,62 @@ export default function CompetitiveAdvantage() {
 
       <ParallaxContainer parallaxAmount={25}>
         <div className="h-full w-full bg-[#30493D]">
-          {/* Placeholder for image - would be replaced with actual brand images */}
           <div className="grid h-full grid-cols-2 grid-rows-2 gap-4 p-8">
-            <div className="flex items-center justify-center rounded-lg bg-[#2B3530] p-4">
-              <p className="text-center text-xl text-white">Skechers</p>
+            <div className="relative flex items-center justify-center overflow-hidden rounded-lg">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/ImageContainer/Skechers.jpg"
+                  alt="Skechers"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                <p className="text-center text-xl font-semibold text-white">Skechers</p>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded-lg bg-[#2B3530] p-4">
-              <p className="text-center text-xl text-white">GUESS</p>
+            <div className="relative flex items-center justify-center overflow-hidden rounded-lg">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/ImageContainer/Guess.jpg"
+                  alt="GUESS"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                <p className="text-center text-xl font-semibold text-white">GUESS</p>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded-lg bg-[#2B3530] p-4">
-              <p className="text-center text-xl text-white">Calvin Klein</p>
+            <div className="relative flex items-center justify-center overflow-hidden rounded-lg">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/ImageContainer/CalvinKlein.jpeg"
+                  alt="Calvin Klein"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                <p className="text-center text-xl font-semibold text-white">Calvin Klein</p>
+              </div>
             </div>
-            <div className="flex items-center justify-center rounded-lg bg-[#2B3530] p-4">
-              <p className="text-center text-xl text-white">Bugatti</p>
+            <div className="relative flex items-center justify-center overflow-hidden rounded-lg">
+              <div className="relative h-full w-full">
+                <Image
+                  src="/ImageContainer/Bugatti.jpg"
+                  alt="Bugatti"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                <p className="text-center text-xl font-semibold text-white">Bugatti</p>
+              </div>
             </div>
           </div>
         </div>

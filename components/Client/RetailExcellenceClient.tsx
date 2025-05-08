@@ -2,11 +2,11 @@
 import Image, { StaticImageData } from "next/image";
 import { motion } from "motion/react";
 import StyledLinkClient from "@/components/Client/StyledLinkClient";
-import Image1 from "@/public/group/discover-elementis.png"; // These will need to be replaced with actual brand images
-import Image2 from "@/public/group/our-vision-and-mission.png";
-import Image3 from "@/public/group/our-commitment.png";
-import Image4 from "@/public/group/our-pillars.png";
-import Image5 from "@/public/group/sustainability.png";
+import Image1 from "@/public/ImageContainer/Skechers.jpg";
+import Image2 from "@/public/ImageContainer/Guess.jpg";
+import Image3 from "@/public/ImageContainer/CalvinKlein.jpeg";
+import Image4 from "@/public/ImageContainer/Bugatti.jpg";
+import Image5 from "@/public/ImageContainer/newbalance.webp";
 import { useImageReveal } from "@/hooks/useImageReveal";
 
 interface LinkType {

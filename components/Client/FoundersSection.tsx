@@ -1,5 +1,6 @@
 "use client";
 import { Fragment } from "react";
+import Image from "next/image";
 import SectionTitle from "@/components/Server/SectionTitle";
 import ResponsiveMaskText from "@/components/Client/ResponsiveMaskTextVariant";
 import MaskText from "@/components/Server/MaskText";
@@ -70,12 +71,30 @@ export default function FoundersSection() {
       <div className="flex items-center justify-center bg-[#2B3530] p-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="flex flex-col items-center">
-            <div className="h-64 w-64 rounded-full bg-[#CED1BF]"></div>
+            <div className="relative h-64 w-64 overflow-hidden rounded-full">
+              <Image
+                src="/ImageContainer/Skechers.jpg"
+                alt="Vishnu Pillai"
+                fill
+                sizes="(max-width: 768px) 100vw, 256px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
+            </div>
             <p className="mt-4 text-center text-xl font-medium">Vishnu Pillai</p>
             <p className="text-center text-base">Founder</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="h-64 w-64 rounded-full bg-[#CED1BF]"></div>
+            <div className="relative h-64 w-64 overflow-hidden rounded-full">
+              <Image
+                src="/ImageContainer/Guess.jpg"
+                alt="Rajesh Dudi"
+                fill
+                sizes="(max-width: 768px) 100vw, 256px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
+            </div>
             <p className="mt-4 text-center text-xl font-medium">Rajesh Dudi</p>
             <p className="text-center text-base">Founder</p>
           </div>

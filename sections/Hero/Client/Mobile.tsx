@@ -14,15 +14,10 @@ export default function HeroMobileClient({
       className="absolute inset-0 grid place-items-center"
       onClick={() => setPlayIntro((prev) => !prev)}
     >
-      <video
-        className="size-full object-cover md:hidden"
-        autoPlay
-        muted
-        loop
-        poster="/Hero/elementis-cover-mjpg.png"
-      >
-        <source src="Hero/elementismp4.mp4" type="video/mp4" />
-      </video>
+      <div className="relative size-full md:hidden">
+        <img src="/ImageContainer/Guess.jpg" alt="Gaurik Hero Mobile" className="size-full object-cover" />
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
       <Cursor
         renderCursor={!playIntro}
         isMobile={true}
