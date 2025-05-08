@@ -15,8 +15,9 @@ export default function HeroMobileClient({
       onClick={() => setPlayIntro((prev) => !prev)}
     >
       <div className="relative size-full md:hidden">
-        <img src="/ImageContainer/Guess.jpg" alt="Gaurik Hero Mobile" className="size-full object-cover" />
-        <div className="absolute inset-0 bg-black/40"></div>
+      <video className="size-full object-cover" autoPlay muted loop>
+            <source src="/Hero/elementismp4.mp4" type="video/mp4"></source>
+          </video>
       </div>
       <Cursor
         renderCursor={!playIntro}
