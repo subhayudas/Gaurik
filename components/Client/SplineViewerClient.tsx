@@ -2,6 +2,8 @@
 
 import Script from "next/script";
 import { useEffect, useRef } from "react";
+import { useIsMobile } from "@/app/providers";
+import Image from "next/image";
 
 interface SplineViewerClientProps {
   url: string;
@@ -10,10 +12,11 @@ interface SplineViewerClientProps {
 
 export default function SplineViewerClient({ url, className = "w-full h-full" }: SplineViewerClientProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
-    // This will run after the component mounts and the script is loaded
-    if (!containerRef.current) return;
+    // Skip for mobile devices as we'll show an image instead
+    if (isMobile || !containerRef.current) return;
 
     // Create a new spline-viewer element
     const splineViewer = document.createElement('spline-viewer');
@@ -42,7 +45,31 @@ export default function SplineViewerClient({ url, className = "w-full h-full" }:
       // Additional adjustments after the model is loaded if needed
       console.log('Spline model loaded');
     });
-  }, [url, className]);
+  }, [url, className, isMobile]);
+
+  // For mobile devices, show the static image instead of the 3D model
+  if (isMobile) {
+    return (
+      <div
+        className={className}
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          minHeight: '400px',
+          overflow: 'hidden'
+        }}
+      >
+        <Image
+          src="/ImageContainer/3dcardpic.jpeg"
+          alt="3D Model Representation"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+    );
+  }
 
   return (
     <>
