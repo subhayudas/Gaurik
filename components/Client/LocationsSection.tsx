@@ -4,11 +4,9 @@ import SectionTitle from "@/components/Server/SectionTitle";
 import ResponsiveMaskText from "@/components/Client/ResponsiveMaskTextVariant";
 import MaskText from "@/components/Server/MaskText";
 import StyledLink from "@/components/Server/StyledLink";
-import { useIsMobile } from "@/app/providers";
 
 export default function LocationsSection() {
-  const isMobile = useIsMobile();
-  
+
   const textLines = {
     mobile: [
       <Fragment key="m-1">Nationwide presence with</Fragment>,
@@ -52,12 +50,12 @@ export default function LocationsSection() {
     <div className="bg-[#CED1BF] px-3-75 py-40 text-[#2B3530] md:px-16 md:py-50">
       <div className="flex flex-col gap-12 md:gap-20">
         <SectionTitle>Our Presence</SectionTitle>
-        
+
         <ResponsiveMaskText
           {...textLines}
           className="text-24 [line-height:1] md:text-40 [&>:first-child]:indent-23"
         />
-        
+
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
           {locations.map((location, index) => (
             <div key={index} className="flex flex-col gap-1">
@@ -66,10 +64,10 @@ export default function LocationsSection() {
             </div>
           ))}
         </div>
-        
+
         <div className="flex flex-col gap-6">
           <p className="text-xl font-medium">Corporate Offices:</p>
-          
+
           <MaskText
             lines={[
               <>New Delhi: AB-1, First Floor, Community</>,
@@ -78,7 +76,7 @@ export default function LocationsSection() {
             ]}
             className="text-lg [line-height:1.3] font-normal"
           />
-          
+
           <MaskText
             lines={[
               <>Bangalore: 20/1, Edan Park, Mezzanine Floor,</>,
@@ -87,7 +85,7 @@ export default function LocationsSection() {
             className="text-lg [line-height:1.3] font-normal"
           />
         </div>
-        
+
         <StyledLink href="#">
           Find Our Stores
         </StyledLink>

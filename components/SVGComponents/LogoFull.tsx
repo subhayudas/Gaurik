@@ -1,15 +1,28 @@
 import { MotionProps } from "motion/react";
 import * as motion from "motion/react-client";
+
+// Define a custom type for the variants that includes fill property
+interface CustomVariants {
+  initial?: { fill?: string };
+  animate?: { fill?: string };
+}
+
 type LogoFullProps = MotionProps & {
   className?: string;
+  variants?: CustomVariants;
 };
+
 export default function LogoFull(props: LogoFullProps) {
+  // Extract the fill colors or use default white
+  const initialColor = props.variants?.initial?.fill || "#FFFFFF";
+  const animateColor = props.variants?.animate?.fill || initialColor;
+
   return (
     <motion.div
       {...props}
       className={`flex items-center ${props.className || ""}`}
-      initial={{ color: props.variants?.initial?.fill || "#FFFFFF" }}
-      animate={{ color: props.variants?.animate?.fill || props.variants?.initial?.fill || "#FFFFFF" }}
+      initial={{ color: initialColor }}
+      animate={{ color: animateColor }}
       transition={{
         duration: 0.6,
         ease: [0.24, 0.43, 0.15, 0.97],

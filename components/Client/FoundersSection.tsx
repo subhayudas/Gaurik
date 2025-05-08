@@ -4,11 +4,9 @@ import SectionTitle from "@/components/Server/SectionTitle";
 import ResponsiveMaskText from "@/components/Client/ResponsiveMaskTextVariant";
 import MaskText from "@/components/Server/MaskText";
 import StyledLink from "@/components/Server/StyledLink";
-import { useIsMobile } from "@/app/providers";
 
 export default function FoundersSection() {
-  const isMobile = useIsMobile();
-  
+
   const textLines = {
     mobile: [
       <Fragment key="m-1">Meet our visionary</Fragment>,

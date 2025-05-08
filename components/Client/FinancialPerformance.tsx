@@ -3,11 +3,9 @@ import { Fragment } from "react";
 import SectionTitle from "@/components/Server/SectionTitle";
 import ResponsiveMaskText from "@/components/Client/ResponsiveMaskTextVariant";
 import MaskText from "@/components/Server/MaskText";
-import { useIsMobile } from "@/app/providers";
 
 export default function FinancialPerformance() {
-  const isMobile = useIsMobile();
-  
+
   const textLines = {
     mobile: [
       <Fragment key="m-1">Strong financial growth</Fragment>,
@@ -36,29 +34,29 @@ export default function FinancialPerformance() {
     <div className="bg-[#2B3530] px-3-75 py-40 text-[#D1CCBF] md:px-16 md:py-50">
       <div className="flex flex-col gap-12 md:gap-20">
         <SectionTitle>Financial Performance</SectionTitle>
-        
+
         <ResponsiveMaskText
           {...textLines}
           className="text-24 [line-height:1] md:text-40 [&>:first-child]:indent-23"
         />
-        
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="flex flex-col gap-2">
             <p className="text-40 font-medium md:text-144">202</p>
             <p className="text-xl">Cr Sales (2023-24)</p>
           </div>
-          
+
           <div className="flex flex-col gap-2">
             <p className="text-40 font-medium md:text-144">29</p>
             <p className="text-xl">Cr EBITDA (2023-24)</p>
           </div>
-          
+
           <div className="flex flex-col gap-2">
             <p className="text-40 font-medium md:text-144">389</p>
             <p className="text-xl">Employees (2023-24)</p>
           </div>
         </div>
-        
+
         <MaskText
           lines={[
             <>With a current EBITDA margin of 14% and</>,

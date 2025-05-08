@@ -2,14 +2,10 @@
 import { Fragment } from "react";
 import SectionTitle from "@/components/Server/SectionTitle";
 import ResponsiveMaskText from "@/components/Client/ResponsiveMaskTextVariant";
-import MaskText from "@/components/Server/MaskText";
-import { useIsMobile } from "@/app/providers";
-import Image from "next/image";
 import ParallaxContainer from "@/components/Client/ParallaxContainer";
 
 export default function CompetitiveAdvantage() {
-  const isMobile = useIsMobile();
-  
+
   const textLines = {
     mobile: [
       <Fragment key="m-1">Our competitive edge</Fragment>,
@@ -51,7 +47,7 @@ export default function CompetitiveAdvantage() {
             {...textLines}
             className="text-24 [line-height:1] md:text-40"
           />
-          
+
           <div className="flex flex-col gap-6">
             {advantages.map((advantage, index) => (
               <div key={index} className="flex items-start gap-4">
@@ -62,7 +58,7 @@ export default function CompetitiveAdvantage() {
           </div>
         </div>
       </div>
-      
+
       <ParallaxContainer parallaxAmount={25}>
         <div className="h-full w-full bg-[#30493D]">
           {/* Placeholder for image - would be replaced with actual brand images */}
