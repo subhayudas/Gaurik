@@ -1,11 +1,11 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import Image1 from "@/public/ImageContainer/Skechers.jpg";
-import Image2 from "@/public/ImageContainer/Guess.jpg";
-import Image3 from "@/public/ImageContainer/CalvinKlein.jpeg";
-import Image4 from "@/public/ImageContainer/Bugatti.jpg";
-import Image5 from "@/public/ImageContainer/newbalance.webp";
+import Image1 from "@/public/ImageContainer/gaurikbuilding.avif";
+import Image2 from "@/public/ImageContainer/Skechers.jpg";
+import Image3 from "@/public/ImageContainer/Guess.jpg";
+import Image4 from "@/public/ImageContainer/CalvinKlein.jpeg";
+import Image5 from "@/public/ImageContainer/Bugatti.jpg";
 import {
   motion,
   MotionValue,

@@ -73,7 +73,7 @@ export default function FoundersSection() {
           <div className="flex flex-col items-center">
             <div className="relative h-64 w-64 overflow-hidden rounded-full">
               <Image
-                src="/ImageContainer/Skechers.jpg"
+                src="/ImageContainer/vishnu.jpeg"
                 alt="Vishnu Pillai"
                 fill
                 sizes="(max-width: 768px) 100vw, 256px"
@@ -87,7 +87,7 @@ export default function FoundersSection() {
           <div className="flex flex-col items-center">
             <div className="relative h-64 w-64 overflow-hidden rounded-full">
               <Image
-                src="/ImageContainer/Guess.jpg"
+                src="/ImageContainer/rajeshdudi.jpeg"
                 alt="Rajesh Dudi"
                 fill
                 sizes="(max-width: 768px) 100vw, 256px"
