@@ -14,7 +14,7 @@ import Introduction from "@/sections/Introduction";
 
 // New sections
 // import MilestonesTimeline from "@/sections/MilestonesTimeline"; // Commented out as it's not being used
-import FinancialGrowth from "@/sections/FinancialGrowth";
+
 import IndiaPresence from "@/sections/IndiaPresence";
 import BusinessChannels from "@/sections/BusinessChannels";
 import BrandPartners from "@/sections/BrandPartners";
