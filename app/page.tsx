@@ -35,7 +35,6 @@ export default function Home() {
       <BusinessChannels />
       <BrandPartners />
       <IndiaPresence />
-      <FinancialGrowth />
       <FutureGrowth />
       <MarketingStrategy />
       <GlobalPresence />
