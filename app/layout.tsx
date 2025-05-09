@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ReactLenis } from "@/utils/lenis";
 import { WindowSizeProvider } from "./providers";
+import FluidCursorWrapper from "@/components/Client/FluidCursorWrapper";
+
 const BasisGrotesquePro = localFont({
   src: [
     {
@@ -31,7 +33,10 @@ export default function RootLayout({
         <body
           className={`${BasisGrotesquePro.variable} antialiased selection:bg-[#ced1bf] selection:text-[#2b3530]`}
         >
-          <WindowSizeProvider>{children}</WindowSizeProvider>
+          <WindowSizeProvider>
+            <FluidCursorWrapper />
+            {children}
+          </WindowSizeProvider>
         </body>
       </ReactLenis>
     </html>
