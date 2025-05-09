@@ -8,7 +8,7 @@ const FluidCursor = () => {
 
   useEffect(() => {
     initFluidCursor();
-  }, []);
+  }, [initFluidCursor]);
 
   return (
     <div className='fixed top-0 left-0 z-[1] pointer-events-none'>

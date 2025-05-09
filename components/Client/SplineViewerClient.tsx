@@ -75,7 +75,7 @@ export default function SplineViewerClient({ url, className = "w-full h-full" }:
     <>
       <Script
         type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.9.91/build/spline-viewer.js"
+        src="https://unpkg.com/@splinetool/viewer@1.9.92/build/spline-viewer.js"
         strategy="afterInteractive"
       />
       <div
